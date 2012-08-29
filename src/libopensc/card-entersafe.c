@@ -33,13 +33,9 @@
 
 static struct sc_atr_table entersafe_atrs[] = {
 	{ 
-		 "3b:0f:00:65:46:53:05:19:05:71:df:00:00:00:00:00:00", 
-		 "ff:ff:ff:ff:ff:ff:ff:00:ff:ff:ff:00:00:00:00:00:00", 
-		 "ePass3000", SC_CARD_TYPE_ENTERSAFE_3K, 0, NULL },
-	{ 
 		 "3b:9f:95:81:31:fe:9f:00:65:46:53:05:30:06:71:df:00:00:00:80:6a:82:5e",
 		 "FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:00:FF:FF:FF:FF:FF:FF:00:00:00:00",
-		 "FTCOS/PK-01C", SC_CARD_TYPE_ENTERSAFE_FTCOS_PK_01C, 0, NULL },
+		 "FTCOS/PK-01C", SC_CARD_TYPE_ENTERSAFE_FTCOS, 0, NULL },
 	{ NULL, NULL, NULL, 0, 0, NULL }
 };
 
@@ -100,7 +96,7 @@ static int entersafe_init(sc_card_t *card)
 
 	SC_FUNC_CALLED(card->ctx, SC_LOG_DEBUG_VERBOSE);
 
-	card->name = "entersafe";
+	card->name = "EntersafePrueba";
 	card->cla  = 0x00;
 	card->drv_data = NULL;
 
@@ -135,7 +131,7 @@ static struct sc_card_driver * sc_get_driver(void)
 	return &entersafe_drv;
 }
 
-struct sc_card_driver * sc_get_entersafe_driver(void)
+struct sc_card_driver * sc_get_entersafetest_driver(void)
 {
 	return sc_get_driver();
 }
