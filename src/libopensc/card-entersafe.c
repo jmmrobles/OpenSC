@@ -1582,7 +1582,7 @@ static struct sc_card_driver * sc_get_driver(void)
 	return &entersafe_drv;
 }
 
-struct sc_card_driver * sc_get_entersafe_driver(void)
+struct sc_card_driver * sc_get_entersafetest_driver(void)
 {
 	return sc_get_driver();
 }

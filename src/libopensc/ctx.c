@@ -83,6 +83,14 @@ static const struct _sc_driver_entry internal_card_drivers[] = {
 	{ "oberthur",	(void *(*)(void)) sc_get_oberthur_driver },
 	{ "authentic",	(void *(*)(void)) sc_get_authentic_driver },
 	{ "iasecc",	(void *(*)(void)) sc_get_iasecc_driver },
+
+/*
+	jmmrobles@gmail.com
+	Aca va la  llamada al driver nuevo 
+*/
+	{ "entersafetest",	(void *(*)(void)) sc_get_entersafetest_driver },
+
+
 #endif
 	{ "belpic",	(void *(*)(void)) sc_get_belpic_driver },
 	{ "ias",		(void *(*)(void)) sc_get_ias_driver },
